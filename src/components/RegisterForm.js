@@ -72,10 +72,11 @@ function RegisterForm() {
   };
   const { name, email, password } = userInfo;
   return (
-    <MDBContainer fluid>
+    <div>
+    <MDBContainer  style={{ marginTop:"100px" }} fluid>
       <MDBCard
         className="text-black m-5 lg:p-5"
-        style={{ borderRadius: "25px" }}
+        style={{ borderRadius: "25px",marginTop:"20px" }}
       >
         <MDBCardBody>
           <MDBRow>
@@ -87,9 +88,11 @@ function RegisterForm() {
             >
                <MDBTypography tag='h1'>Grow Habit</MDBTypography>
               <p classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
-                Register For Event
+                5-Day Deep Work Challenge
               </p>
-
+              <p classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
+                Lets's Connect Together. Work Together
+              </p>
               <div className="d-flex flex-row align-items-center mb-4 ">
                 <MDBIcon fas icon="user me-3" size="lg" />
                 <MDBInput
@@ -157,6 +160,7 @@ function RegisterForm() {
         </MDBCardBody>
       </MDBCard>
     </MDBContainer>
+    </div>
   );
 }
 
