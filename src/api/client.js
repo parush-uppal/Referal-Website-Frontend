@@ -1,5 +1,5 @@
 import axios from "axios";
 
-const client = axios.create({ baseURL: "http://localhost:8000/api" });
+const client = axios.create({ baseURL: "https://referal-n9xs.onrender.com/api" });
 
 export default client;
