@@ -37,9 +37,8 @@ function RegisterForm() {
     if (!isValidEmail.test(email))
       return { ok: false, error: "Invalid email!" };
 
-    if (!password.trim()) return { ok: false, error: "Password is missing!" };
-    if (password.length < 8)
-      return { ok: false, error: "Password must be 8 characters long!" };
+    
+    
 
     return { ok: true };
   };
@@ -64,19 +63,19 @@ function RegisterForm() {
     const response = await createUser(userInfo);
     if(response.referalLink){
         console.log(response.referalLink)
-       return navigate("/registered",{state:{referalLink:response.referalLink}});
+       return navigate("/registered",{state:{referalLink:response.referalLink,userRefered:response.userRefered}});
     }
     if (response.error) return updateNotification('error',response.error);
     const referalLink=response.user.referalLink
     navigate("/success",{state:{referalLink:referalLink}});
   };
-  const { name, email, password } = userInfo;
+  const { name, email } = userInfo;
   return (
     <div>
     <MDBContainer  style={{ marginTop:"100px" }} fluid>
       <MDBCard
         className="text-black m-5 lg:p-5"
-        style={{ borderRadius: "25px",marginTop:"20px" }}
+        style={{ borderRadius: "25px",marginTop:"15px" }}
       >
         <MDBCardBody>
           <MDBRow>
@@ -92,6 +91,9 @@ function RegisterForm() {
               </p>
               <p classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
                 Lets's Connect Together. Work Together
+              </p>
+              <p classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
+                Starting from Thursday. From 7 am to 9 am
               </p>
               <div className="d-flex flex-row align-items-center mb-4 ">
                 <MDBIcon fas icon="user me-3" size="lg" />
@@ -130,17 +132,7 @@ function RegisterForm() {
                 />
               </div>
 
-              <div className="d-flex flex-row align-items-center mb-4">
-                <MDBIcon fas icon="lock me-3" size="lg" />
-                <MDBInput
-                  onChange={handleChange}
-                  value={password}
-                  name="password"
-                  label="Password"
-                  id="form4"
-                  type="password"
-                />
-              </div>
+              
               <MDBBtn onClick={handleSubmit} className="mb-4" size="lg">
                 Register
               </MDBBtn>
