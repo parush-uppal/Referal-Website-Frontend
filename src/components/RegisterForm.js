@@ -74,7 +74,7 @@ function RegisterForm() {
     <div>
     <MDBContainer  style={{ marginTop:"100px" }} fluid>
       <MDBCard
-        className="text-black m-5 lg:p-5"
+        className="text-black m-5"
         style={{ borderRadius: "25px",marginTop:"15px" }}
       >
         <MDBCardBody>
@@ -90,7 +90,7 @@ function RegisterForm() {
                 5-Day Deep Work Challenge
               </p>
               <p classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
-                Lets's Connect Together. Work Together
+                Let's Connect Together. Work Together
               </p>
               <p classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
                 Starting from Thursday. From 7 am to 9 am

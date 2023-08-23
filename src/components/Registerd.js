@@ -55,7 +55,7 @@ export default function Registered() {
                   class="fas fa-people-arrows fa-lg"
                   style={{ color: "green" }}
                 ></i>{" "}
-                Number of Freiends You Helped To Focus:{" "}
+                Number of Friends You Helped To Focus:{" "}
                 <span style={{ fontSize: "20px", fontWeight: "bolder" }}>
                   {location.state.userRefered}
                 </span>
