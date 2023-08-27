@@ -34,11 +34,11 @@ export default function SuccessForm() {
             >
               <MDBTypography tag="h1">Grow Habit</MDBTypography>
               <p classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
-                You have SuccessFully Registerd For Event
+                Congratulations for Taking the challenge
               </p>
               <p>
                 <i class="fas fa-retweet fa-lg" style={{ color: "green" }}></i>{" "}
-                Share it With your friends and help them to focus.
+                Challenge your friends and help them to focus as well.
               </p>
 
               <p

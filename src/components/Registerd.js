@@ -34,12 +34,15 @@ export default function Registered() {
             >
               <MDBTypography tag="h1">Grow Habit</MDBTypography>
               <p classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
-                You have Already Registerd For Event Please Help Us By Refering
-                Others
+                You have already taken the challenge. 
               </p>
               <p>
                 <i class="fas fa-retweet fa-lg" style={{ color: "green" }}></i>{" "}
-                Share it With your friends and help them to focus.
+                Help your friends by challenging them to take the "5-Day Deep Work Challenge."
+              </p>
+              <p>
+                <i class=""></i>
+                Use this personalised link to share :: 
               </p>
               <p
                 style={{
