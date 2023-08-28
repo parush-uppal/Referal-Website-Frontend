@@ -87,14 +87,14 @@ function RegisterForm() {
             >
                <MDBTypography tag='h1'>Grow Habit</MDBTypography>
               <p classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
-                Your friend challenged you to take the 5-Day DEEP WORK CHALLENGE.
+                5-Day Deep Work Challenge
                 {/* {name} challenged you to take 5 Day Deep Work Challenge  */}
               </p>
               <p classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
                 Work With Your Friends. Let's make productivity fun !!! 
               </p>
               <p classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
-                Starting from Tomorrow. From 7 am to 9 am IST 
+                Starting from Monday. From 7 am to 9 am and 6am to 8am IST .. 
               </p>
             
               <div className="d-flex flex-row align-items-center mb-4 ">

@@ -34,7 +34,7 @@ export default function SuccessForm() {
             >
               <MDBTypography tag="h1">Grow Habit</MDBTypography>
               <p classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
-                Congratulations for Taking the challenge
+                You accepted the Challenge given to you by your friend.
               </p>
               <p>
                 <i class="fas fa-retweet fa-lg" style={{ color: "green" }}></i>{" "}
@@ -67,7 +67,7 @@ export default function SuccessForm() {
                   href="https://chat.whatsapp.com/KYrlFO7gcgaFlx8ZZr9BWx"
                   className="text-center"
                 >
-                   Join Our Whatsapp Group for further updates
+                   Join the Whatsapp Group for further updates
                 </a>
               </p>
             </MDBCol>
