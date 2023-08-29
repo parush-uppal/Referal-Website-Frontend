@@ -13,8 +13,9 @@ import {
   MDBIcon,
   MDBCheckbox,
 } from "mdb-react-ui-kit";
-import { createUser } from "../api/auth";
+import { createUser, getUser } from "../api/auth";
 import { useNotification } from "../hooks";
+import { useEffect } from "react";
 
 
 function RegisterForm() {
@@ -24,6 +25,7 @@ function RegisterForm() {
     password: "",
     number:"",
   });
+  const [namee, setNamee] = useState("");
   const { updateNotification } = useNotification(); 
 
   const validateUserInfo = ({ name, email, password }) => {
@@ -52,6 +54,14 @@ function RegisterForm() {
     setUserInfo({ ...userInfo, [name]: value });
   };
 
+  const getName = async() => {
+    const query = searchParams.get("referalId");
+    if(query){
+        const data =  await getUser({id:query}); 
+        setNamee(data.data.users.name)
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { ok, error } = validateUserInfo(userInfo);
@@ -62,13 +72,15 @@ function RegisterForm() {
 
     const response = await createUser(userInfo);
     if(response.referalLink){
-        console.log(response.referalLink)
        return navigate("/registered",{state:{referalLink:response.referalLink,userRefered:response.userRefered}});
     }
     if (response.error) return updateNotification('error',response.error);
     const referalLink=response.user.referalLink
     navigate("/success",{state:{referalLink:referalLink}});
   };
+  useEffect(() => {
+    getName(); 
+},[searchParams.get("referalId")]);
   const { name, email } = userInfo;
   return (
     <div>
@@ -87,7 +99,7 @@ function RegisterForm() {
             >
                <MDBTypography tag='h1'>Grow Habit</MDBTypography>
               <p classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
-                Your friend challenged you to take the 5-Day DEEP WORK CHALLENGE.
+                Your friend {namee} has challenged you to take the 5-Day DEEP WORK CHALLENGE.
                 {/* {name} challenged you to take 5 Day Deep Work Challenge  */}
               </p>
               <p classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">

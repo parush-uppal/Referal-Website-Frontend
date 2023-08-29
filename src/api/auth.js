@@ -11,3 +11,12 @@ export const createUser = async (userInfo) => {
     return { error: error.message || error };
   }
 };
+
+export const getUser = async ({id}) => {
+    try {
+      const data = await client.post("/user/singleUser",{id});
+      return data;
+    } catch (error) {
+      return  error;
+    }
+  };
